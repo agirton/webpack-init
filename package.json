@@ -2,7 +2,7 @@
   "name": "webpack-init",
   "version": "0.0.1",
   "description": "Script to initialize your webpack projects",
-  "bin": "./bin/webpack-init",
+  "bin": "bin/webpack-init",
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src -d lib",
