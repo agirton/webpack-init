@@ -1,4 +1,4 @@
-# Webpack Init
+# webpack init
 
 Initialize simple [webpack](http://webpack.github.io) config file
 
