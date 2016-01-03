@@ -7,8 +7,7 @@
   "scripts": {
     "build": "babel src -d lib",
     "build:watch": "babel src -d lib --watch",
-    "start": "node ./lib",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "npm run build"
   },
   "keywords": [
     "webpack"
@@ -30,6 +29,9 @@
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-stage-2": "^6.3.13",
     "eslint": "^1.10.3"
+  },
+  "bugs": {
+    "url": "https://github.com/agirton/webpack-init/issues"
   },
   "babel": {
     "presets": [
