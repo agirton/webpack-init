@@ -1,6 +1,6 @@
 {
   "name": "webpack-init",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Script to initialize your webpack projects",
   "bin": {
     "webpack-init": "./bin/webpack-init.js"
