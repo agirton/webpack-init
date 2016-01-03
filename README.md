@@ -11,5 +11,9 @@ npm install --save-dev webpack-init
 ## To Run
 `webpack-init`
 
+Once you run the command it will ask a series of questions and then once you have
+selected your loaders it fires off a `node child process` to install all of those
+for you.
+
 ## License
 MIT
