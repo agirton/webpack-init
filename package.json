@@ -1,0 +1,75 @@
+{
+  "name": "webpackinit",
+  "version": "0.0.1",
+  "description": "Script to initialize your webpack projects",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src -d lib",
+    "build:watch": "babel src -d lib --watch",
+    "start": "node ./lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agirton/webpackinit.git"
+  },
+  "author": "Adam Girton <adam.girton@me.com> (https://github.com/agirton)",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^0.11.0",
+    "ramda": "^0.19.0",
+    "stringify-object": "^2.3.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.3.17",
+    "babel-eslint": "^4.1.6",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-stage-2": "^6.3.13",
+    "eslint": "^1.10.3"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-2"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "eslint:recommended",
+    "eol-last": 2,
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "parser": "babel-eslint",
+    "indent": [
+      2,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "modules": true,
+    "no-unused-vars": 2,
+    "no-multiple-empty-lines": 2,
+    "quotes": [
+      2,
+      "single",
+      "avoid-escape"
+    ],
+    "semi": [
+      2,
+      "never"
+    ],
+    "strict": 0,
+    "space-before-blocks": [
+      2,
+      "always"
+    ],
+    "space-before-function-paren": [
+      2
+    ]
+  }
+}
