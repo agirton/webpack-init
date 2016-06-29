@@ -3,25 +3,25 @@ export const base = [
     type: 'input',
     name: 'configFileName',
     message: 'Enter the file name for your webpack config',
-    default() { return 'webpack.config.js' }
+    default: () => 'webpack.config.js'
   },
   {
     type: 'input',
     name: 'entry',
     message: 'Enter the filename for your entry',
-    default() { return 'index.js' }
+    default: () => 'index.js'
   },
   {
     type: 'input',
     name: 'outputPath',
     message: 'Enter the output path, this is where your images and js will be output at',
-    default() { return './' }
+    default: () => './'
   },
   {
     type: 'input',
     name: 'outputFilename',
     message: 'Enter the output filename',
-    default() { return 'bundle.js' }
+    default: () => 'bundle.js'
   },
   {
     type: 'confirm',
