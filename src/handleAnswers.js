@@ -30,7 +30,7 @@ const createPublicProp = (x) => (x.publicPathRequired && {
   ...x,
   output: {
     ...x.output,
-    publicPath: x.publicPath
+    publicPath: x.outputPublicPath
   }
 })
 
@@ -41,11 +41,13 @@ const loadersMap = (config) => (x) => (config[x.trim()])
 // extend answers object with mapped loader configs
 const createLoadersConfig = (x) => ({
   ...x,
-  loaders: map(loadersMap(loaderConfig(x.initialEntry)), x.loaders)
+  module: {
+    loaders: map(loadersMap(loaderConfig(x.initialEntry)), x.loaders)
+  }
 })
 
 // grab only these properties out of our answers object
-const finalProps = pick(['entry', 'output', 'loaders'])
+const finalProps = pick(['entry', 'output', 'module'])
 
 // outputConfig :: Answers -> Object
 export const outputConfig = compose(
@@ -68,30 +70,29 @@ const fileTemplate = (code) => (
 `module.exports = ${code}`
 )
 
-// mapLoaders :: [Object] -> [String]
+// mapLoaders :: Object -> [String]
 const mapLoaders = (xs) => (
-  map(({ modules }) => modules, xs)
-)
-
-// flattenLoaders :: [[String]] -> [String]
-const flattenLoaders = (xs) => (
-  flatten(xs)
+  map(({modules}) => modules, xs.loaders)
 )
 
 // removeModulesFromLoaders :: Object -> Object
 // remove modules prop so we don't include in final output
 const removeModulesFromLoaders = (x) => ({
   ...x,
-  loaders: map(pick(['test', 'loaders', 'include', 'query']), x.loaders)
+  module: {
+    loaders: map(pick(['test', 'loaders', 'include', 'query']), x.module.loaders)
+  }
 })
 
 export default (answers) => {
   const final = outputConfig(answers)
+
+  // install modules
   compose(
     installModules,
-    map(flattenLoaders),
+    map(flatten),
     map(mapLoaders),
-    pick(['loaders'])
+    pick(['module'])
   )(final)
 
   const output = fileTemplate(stringify(removeModulesFromLoaders(final), {
