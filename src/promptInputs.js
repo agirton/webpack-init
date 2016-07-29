@@ -9,7 +9,7 @@ export const base = [
     type: 'input',
     name: 'entry',
     message: 'Enter the filename for your entry',
-    default: () => 'index.js'
+    default: () => './index.js'
   },
   {
     type: 'input',
