@@ -1,6 +1,6 @@
 {
   "name": "webpack-init",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Script to initialize your webpack projects",
   "bin": {
     "webpack-init": "./bin/webpack-init.js"
@@ -29,17 +29,17 @@
   "author": "Adam Girton <adam.girton@me.com> (https://github.com/agirton)",
   "license": "MIT",
   "dependencies": {
-    "inquirer": "1.1.0",
-    "ramda": "0.21.0",
+    "inquirer": "1.2.2",
+    "ramda": "0.22.1",
     "stringify-object": "2.4.0"
   },
   "devDependencies": {
-    "babel-cli": "6.10.1",
-    "babel-eslint": "6.1.0",
-    "babel-preset-es2015": "6.9.0",
-    "babel-preset-stage-2": "6.11.0",
-    "eslint": "2.13.1",
-    "rimraf": "2.5.2"
+    "babel-cli": "6.16.0",
+    "babel-eslint": "7.0.0",
+    "babel-preset-es2015": "6.16.0",
+    "babel-preset-stage-2": "6.17.0",
+    "eslint": "3.8.0",
+    "rimraf": "2.5.4"
   },
   "homepage": "https://github.com/agirton/webpack-init",
   "bugs": {
