@@ -30,6 +30,7 @@
   "license": "MIT",
   "dependencies": {
     "inquirer": "1.2.2",
+    "path-exists": "3.0.0",
     "ramda": "0.22.1",
     "stringify-object": "2.4.0"
   },
@@ -67,6 +68,7 @@
       }
     ],
     "modules": true,
+    "no-console": 1,
     "no-unused-vars": 2,
     "no-multiple-empty-lines": 2,
     "quotes": [

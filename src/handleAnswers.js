@@ -89,7 +89,7 @@ export default (answers) => {
 
   // install modules
   compose(
-    installModules,
+    installModules(answers.configFileName),
     map(flatten),
     map(mapLoaders),
     pick(['module'])
