@@ -58,7 +58,8 @@
     "eol-last": 2,
     "env": {
       "node": true,
-      "es6": true
+      "es6": true,
+      "jest": true
     },
     "parser": "babel-eslint",
     "indent": [
