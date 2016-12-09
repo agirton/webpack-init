@@ -39,7 +39,7 @@ const loadersMap = (config) => (x = '') => (config[x.trim()])
 
 // createLoadersConfig :: Object -> Object
 // extend answers object with mapped loader configs
-const createLoadersConfig = ({initialEntry ="", loaders = [], ...rest}) => ({
+const createLoadersConfig = ({initialEntry ='', loaders = [], ...rest}) => ({
   initialEntry,
   loaders,
   ...rest,
