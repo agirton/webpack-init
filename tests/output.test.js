@@ -1,10 +1,9 @@
-import {outputConfig} from '../src/handleAnswers.js';
+import { outputConfig } from '../src/handleAnswers.js';
 
 describe('Correct answers', () => {
-  it('should have correct ans', () => {
-    let config;
+  it('should output proper format based on answer', () => {
     answerList.forEach((answer,index) => {
-      config = outputConfig(answer);
+      const config = outputConfig(answer);
       const key = Object.keys(expectedConfigList[index])[0];
       const val = expectedConfigList[index][key];
       expect(config[key]).toEqual(val);
