@@ -35,14 +35,16 @@ const createPublicProp = (x) => (x.publicPathRequired && {
 })
 
 // loadersMap :: Object -> String -> Object
-const loadersMap = (config) => (x) => (config[x.trim()])
+const loadersMap = (config) => (x = '') => (config[x.trim()])
 
 // createLoadersConfig :: Object -> Object
 // extend answers object with mapped loader configs
-const createLoadersConfig = (x) => ({
-  ...x,
+const createLoadersConfig = ({initialEntry ='', loaders = [], ...rest}) => ({
+  initialEntry,
+  loaders,
+  ...rest,
   module: {
-    loaders: map(loadersMap(loaderConfig(x.initialEntry)), x.loaders)
+    loaders: map(loadersMap(loaderConfig(initialEntry)), loaders)
   }
 })
 

@@ -10,7 +10,8 @@
     "build": "babel src -d lib",
     "build:watch": "babel src -d lib --watch",
     "clean": "rimraf lib",
-    "prepublish": "npm run clean && npm run build"
+    "prepublish": "npm run clean && npm run build",
+    "test": "jest"
   },
   "files": [
     "bin",
@@ -40,6 +41,7 @@
     "babel-preset-es2015": "6.16.0",
     "babel-preset-stage-2": "6.17.0",
     "eslint": "3.8.0",
+    "jest": "17.0.3",
     "rimraf": "2.5.4"
   },
   "homepage": "https://github.com/agirton/webpack-init",
@@ -57,7 +59,8 @@
     "eol-last": 2,
     "env": {
       "node": true,
-      "es6": true
+      "es6": true,
+      "jest": true
     },
     "parser": "babel-eslint",
     "indent": [
