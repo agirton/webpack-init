@@ -9,9 +9,12 @@
   "scripts": {
     "build": "babel src -d lib",
     "build:watch": "babel src -d lib --watch",
+    "check": "npm run lint && npm test",
     "clean": "rimraf lib",
-    "prepublish": "npm run clean && npm run build",
-    "test": "jest"
+    "lint": "eslint src",
+    "prepublish": "npm run clean && npm run check && npm run build",
+    "test": "jest",
+    "test:watch": "npm test -- --watch"
   },
   "files": [
     "bin",
