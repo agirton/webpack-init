@@ -1,5 +1,7 @@
-# webpack init
+# Deprecated
+This package is no longer supported now that [webpack-init](https://github.com/webpack/webpack-cli) is live. Use that, it's great!
 
+# webpack init
 Initialize simple [webpack](http://webpack.github.io) config file
 
 ## Installation
